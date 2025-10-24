@@ -16,7 +16,42 @@
       <h1 class="title">MY CALCULATOR</h1>
     </header>
     <main>
-        <div class="cuadrado"></div>
+      <div class="cuadrado">
+        <section class="resultado">
+          <input
+            type="text"
+            placeholder="El resultado guey"
+            name="resultado"
+            id="result"
+            readonly
+          />
+          <input
+            type="button"
+            id="delete"
+            onclick="result.value=''"
+            value="C"
+          />
+          <input type="button" value="=" onclick="calculate(result.value)">
+        </section>
+        <section class="numbers">
+          <input type="button" value="1" onclick="liveScreen(1)" />
+          <input type="button" value="2" onclick="liveScreen(2)" />
+          <input type="button" value="3" onclick="liveScreen(3)" />
+          <input type="button" value="4" onclick="liveScreen(4)" />
+          <input type="button" value="5" onclick="liveScreen(5)"/>
+          <input type="button" value="6" onclick="liveScreen(6)"/>
+          <input type="button" value="7" onclick="liveScreen(7)"/>
+          <input type="button" value="8" onclick="liveScreen(8)"/>
+          <input type="button" value="9" onclick="liveScreen(9)"/>
+          <input type="button" value="0" onclick="liveScreen(0)"/>
+        </section>
+        <section class="signos">
+          <input id="suma" type="button" value="+" />
+          <input id="resta" type="button" value="-" />
+          <input id="multiplicacion" type="button" value="*" />
+          <input id="division" type="button" value="/" />
+        </section>
+      </div>
     </main>
     <footer></footer>
     <script src="logica.Js"></script>
