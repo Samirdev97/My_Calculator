@@ -18,40 +18,34 @@
     <main class="body">
       <div class="cuadrado">
         <section class="resultado">
-          <input
+          <input class="visor"
             type="text"
             placeholder="El resultado guey"
             name="resultado"
             id="result"
             readonly
           />
-          <input
-            type="button"
-            id="delete"
-            onclick="result.value=''"
-            value="C"
-          />
-          <input type="button" value="=" onclick="calculate(result.value)">
+          <input class="buttons" type="button" value="=" onclick="calculate(result.value)">
+        </section>
         </section>
         <section class="numbers">
-          <input type="button" value="1" onclick="liveScreen(1)" />
-          <input type="button" value="2" onclick="liveScreen(2)" />
-          <input type="button" value="3" onclick="liveScreen(3)" />
-          <input type="button" value="4" onclick="liveScreen(4)" />
-          <input type="button" value="5" onclick="liveScreen(5)"/>
-          <input type="button" value="6" onclick="liveScreen(6)"/>
-          <input type="button" value="7" onclick="liveScreen(7)"/>
-          <input type="button" value="8" onclick="liveScreen(8)"/>
-          <input type="button" value="9" onclick="liveScreen(9)"/>
-          <input type="button" value="0" onclick="liveScreen(0)"/>
-        </section>
-        <section class="signos">
-          <input type="button" value="+" onclick="liveScreen('+')" />
-          <input type="button" value="-" onclick="liveScreen('-')" />
-          <input type="button" value="*" onclick="liveScreen('*')" />
-          <input type="button" value="/" onclick="liveScreen('/')" />
-          <input type ="button" value="." onclick="liveScreen('.')">
-        </section>
+          <button class="buttons" type="button" value="1" onclick="liveScreen(1)"></button>
+          <button class="buttons" type="button" value="2" onclick="liveScreen(2)"></button>
+          <button class="buttons" type="button" value="3" onclick="liveScreen(3)"></button>
+          <button class="buttons" type="button" value="+" onclick="liveScreen('+')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#303030" d="M128 63.954c0 2.006-.797 3.821-2.136 5.127-1.308 1.337-3.125 2.133-5.166 2.133H71.302v49.356c0 4.012-3.284 7.292-7.302 7.292-2.009 0-3.827-.828-5.166-2.134-1.308-1.337-2.136-3.152-2.136-5.159V71.214H7.302c-4.05 0-7.302-3.248-7.302-7.26 0-2.006.797-3.853 2.136-5.159a7.279 7.279 0 0 1 5.166-2.134h49.395V7.306c0-4.012 3.284-7.26 7.302-7.26 2.009 0 3.827.828 5.166 2.133a7.238 7.238 0 0 1 2.136 5.127v49.356h49.395A7.276 7.276 0 0 1 128 63.954z"/></svg> </button>
+          <button class="buttons" type="button" value="4" onclick="liveScreen(4)"></button>
+          <button class="buttons" type="button" value="5" onclick="liveScreen(5)"></button>
+          <button class="buttons" type="button" value="6" onclick="liveScreen(6)"></button>
+          <button class="buttons" type="button" value="-" onclick="liveScreen('-')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#303030" d="M125.61 71.238H2.39A2.39 2.39 0 0 1 0 68.848v-9.787a2.39 2.39 0 0 1 2.39-2.39h123.22a2.39 2.39 0 0 1 2.39 2.39v9.787a2.39 2.39 0 0 1-2.39 2.39z"/></svg></button>
+          <button class="buttons" type="button" value="7" onclick="liveScreen(7)"></button>
+          <button class="buttons"type="button" value="8" onclick="liveScreen(8)"></button>
+          <button class="buttons"type="button" value="9" onclick="liveScreen(9)"></button>
+          <button class="buttons" type="button" value="*" onclick="liveScreen('*')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#303030" d="M125.079 111.058c3.868 3.862 3.868 10.067 0 13.888v.041c-3.827 3.821-10.081 3.821-13.908 0L63.974 77.858l-47.155 47.129c-3.868 3.821-10.081 3.821-13.908 0l-.041-.041c-3.827-3.821-3.827-10.026 0-13.888L50.066 63.97 2.87 16.841C-.957 13.02-.957 6.774 2.87 2.953h.041c3.827-3.862 10.04-3.862 13.908 0l47.155 47.088 47.197-47.088c3.827-3.862 10.081-3.862 13.908 0A9.736 9.736 0 0 1 128 9.897a9.736 9.736 0 0 1-2.921 6.944L77.923 63.97l47.156 47.088z"/></svg></button>
+          <button class="buttons" type ="button" value="." onclick="liveScreen('.')"></button>
+          <button class="buttons"type="button" value="0" onclick="liveScreen(0)"></button>
+          <button type="button" id="delete" onclick="result.value=''"value="C"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#303030" d="M125.61 39.284H2.39A2.39 2.39 0 0 1 0 36.894v-9.787a2.39 2.39 0 0 1 2.39-2.39h123.22a2.39 2.39 0 0 1 2.39 2.39v9.787a2.39 2.39 0 0 1-2.39 2.39zm2.39 61.518v-9.787a2.39 2.39 0 0 0-2.39-2.39H2.39A2.39 2.39 0 0 0 0 91.015v9.787a2.39 2.39 0 0 0 2.39 2.39h123.22a2.39 2.39 0 0 0 2.39-2.39z"/></svg></button>
+          <button class="buttons" type="button" value="/" onclick="liveScreen('/')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><path style="fill:#303030" d="M125.61 71.81H2.39A2.39 2.39 0 0 1 0 69.42v-9.787a2.39 2.39 0 0 1 2.39-2.39h123.22a2.39 2.39 0 0 1 2.39 2.39v9.787a2.39 2.39 0 0 1-2.39 2.39zM64 31.237c4.627 0 8.378-3.746 8.378-8.366S68.627 14.504 64 14.504s-8.378 3.746-8.378 8.366 3.751 8.367 8.378 8.367zm0 82.168c4.627 0 8.378-3.746 8.378-8.366S68.627 96.672 64 96.672s-8.378 3.746-8.378 8.366 3.751 8.367 8.378 8.367z"/></svg></button>
+          
       </div>
     </main>
     <footer></footer>
