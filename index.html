@@ -15,7 +15,7 @@
     <header>
       <h1 class="title">MY CALCULATOR</h1>
     </header>
-    <main>
+    <main class="body">
       <div class="cuadrado">
         <section class="resultado">
           <input
@@ -46,10 +46,11 @@
           <input type="button" value="0" onclick="liveScreen(0)"/>
         </section>
         <section class="signos">
-          <input id="suma" type="button" value="+" />
-          <input id="resta" type="button" value="-" />
-          <input id="multiplicacion" type="button" value="*" />
-          <input id="division" type="button" value="/" />
+          <input type="button" value="+" onclick="liveScreen('+')" />
+          <input type="button" value="-" onclick="liveScreen('-')" />
+          <input type="button" value="*" onclick="liveScreen('*')" />
+          <input type="button" value="/" onclick="liveScreen('/')" />
+          <input type ="button" value="." onclick="liveScreen('.')">
         </section>
       </div>
     </main>

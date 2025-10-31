@@ -4,8 +4,31 @@
     height: 500px;
     background-color: black;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .title{
     text-align: center;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.resultado{
+margin-bottom: 20px;
+display: flex;
+align-items: space-around;
+}
+
+.numbers{
+
+}
+
+.signos{
+    
 }
