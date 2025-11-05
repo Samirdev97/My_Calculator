@@ -18,40 +18,34 @@
     <main class="body">
       <div class="cuadrado">
         <section class="resultado">
-          <input
+          <input class="visor"
             type="text"
             placeholder="El resultado guey"
             name="resultado"
             id="result"
             readonly
           />
-          <input
-            type="button"
-            id="delete"
-            onclick="result.value=''"
-            value="C"
-          />
-          <input type="button" value="=" onclick="calculate(result.value)">
+          <input class="buttons" type="button" value="=" onclick="calculate(result.value)">
+        </section>
         </section>
         <section class="numbers">
-          <input type="button" value="1" onclick="liveScreen(1)" />
-          <input type="button" value="2" onclick="liveScreen(2)" />
-          <input type="button" value="3" onclick="liveScreen(3)" />
-          <input type="button" value="4" onclick="liveScreen(4)" />
-          <input type="button" value="5" onclick="liveScreen(5)"/>
-          <input type="button" value="6" onclick="liveScreen(6)"/>
-          <input type="button" value="7" onclick="liveScreen(7)"/>
-          <input type="button" value="8" onclick="liveScreen(8)"/>
-          <input type="button" value="9" onclick="liveScreen(9)"/>
-          <input type="button" value="0" onclick="liveScreen(0)"/>
-        </section>
-        <section class="signos">
-          <input type="button" value="+" onclick="liveScreen('+')" />
-          <input type="button" value="-" onclick="liveScreen('-')" />
-          <input type="button" value="*" onclick="liveScreen('*')" />
-          <input type="button" value="/" onclick="liveScreen('/')" />
-          <input type ="button" value="." onclick="liveScreen('.')">
-        </section>
+          <button class="buttons" type="button" value="1" onclick="liveScreen(1)"><span>1</span></button>
+          <button class="buttons" type="button" value="2" onclick="liveScreen(2)"><span>2</span></button>
+          <button class="buttons" type="button" value="3" onclick="liveScreen(3)"><span>3</span></button>
+          <button class="buttons" type="button" value="+" onclick="liveScreen('+')"><span>+</span></button>
+          <button class="buttons" type="button" value="4" onclick="liveScreen(4)"><span>4</span></button>
+          <button class="buttons" type="button" value="5" onclick="liveScreen(5)"><span>5</span></button>
+          <button class="buttons" type="button" value="6" onclick="liveScreen(6)"><span>6</span></button>
+          <button class="buttons" type="button" value="-" onclick="liveScreen('-')"><span>-</span></button>
+          <button class="buttons" type="button" value="7" onclick="liveScreen(7)"><span>7</span></button>
+          <button class="buttons"type="button" value="8" onclick="liveScreen(8)"><span>8</span></button>
+          <button class="buttons"type="button" value="9" onclick="liveScreen(9)"><span>9</span></button>
+          <button class="buttons" type="button" value="*" onclick="liveScreen('*')"><span>X</span></button>
+          <button class="buttons" type ="button" value="." onclick="liveScreen('.')"><span>.</span></button>
+          <button class="buttons"type="button" value="0" onclick="liveScreen(0)"><span>0</span></button>
+          <button class="buttons" type="button" onclick="result.value=''"value="C"><span>C</span></button>
+          <button class="buttons" type="button" value="/" onclick="liveScreen('/')"><Span>÷</Span></button>
+
       </div>
     </main>
     <footer></footer>
