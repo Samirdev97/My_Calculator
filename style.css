@@ -27,15 +27,86 @@
 .numbers {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 4fr);
   gap: 10px;
   max-width: 200px;
   margin: 0 auto;
 }
 
-.buttons{
-    width: 35px;
-    height: 25px;
+
+
+.buttons {
+  position: relative;
+ width: 50px;
+ height: 40px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.buttons span {
+  position: relative;
+  z-index: 2; 
+}
+
+.buttons::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, red, purple, blue);
+  background-size: 300%;
+  border-radius: inherit;
+  animation: border-animation 3s linear infinite;
+  z-index: -1;
+}
+
+.buttons::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  border-radius: inherit;
+  z-index: 1;
+  
+}
+
+@keyframes border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.buttons:hover::before {
+  animation-duration: 1s;
+}
+
+
+.buttonResultado{
+  width: 85px;
+  height: 35px;
+  border-radius: 50px;
+}
+.buttonResultado:hover{
+  background-color: black;
+  color: aliceblue;
+  border-radius: 50px;
 }
 
 .visor{
